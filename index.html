@@ -4,41 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <title>Задание 2</title>
-    <style>
-        body {
-            background-color: lightcyan;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .calculator {
-            background-color: lightslategray;
-            width: 600px;
-            height: 100px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        button {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Задание 1.2</title>
 </head>
 <body>
     <h1>Калькулятор</h1>
+    <input class="first-number" type="text" placeholder="Введите первое число">
+    <input class="second-number" type="text" placeholder="Введите второе число">
     <div class="calculator">
         <button onclick="calcSum()">+</button>
         <button onclick="calcDiff()">-</button>
         <button onclick="calcMultipl()">*</button>
         <button onclick="calcDivision()">/</button>
     </div>
+    <div class="result"></div>
+    <script src="index.js"></script>
 </body>
 </html>

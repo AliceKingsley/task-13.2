@@ -1,34 +1,35 @@
 let a = 0;
 let b = 0;
+const div = document.querySelector('.result');
 
 function askFirstNumber() {
-    return +prompt('Введите первое число: ');
+    return Number(document.querySelector('.first-number').value);
 }
 
 function askSecondNumber() {
-    return +prompt('Введите второе число: ');
+    return Number(document.querySelector('.second-number').value);
 }
 
 function calcSum() {
     a = askFirstNumber();
     b = askSecondNumber();
-    alert(`${a} + ${b} = ${a + b}`);
+    div.textContent = `Результат сложения: ${a + b}`;
 }
 
 function calcDiff() {
     a = askFirstNumber();
     b = askSecondNumber();
-    alert(`${a} - ${b} = ${a - b}`);
+    div.textContent = `Результат вычитания: ${a - b}`;
 }
 
 function calcMultipl() {
     a = askFirstNumber();
     b = askSecondNumber();
-    alert(`${a} * ${b} = ${a * b}`);
+    div.textContent = `Результат умножения: ${a * b}`;
 }
 
 function calcDivision() {
     a = askFirstNumber();
     b = askSecondNumber();
-    alert(`${a} / ${b} = ${a / b}`);
+    div.textContent = `Результат деления: ${a / b}`;
 }
