@@ -1,3 +1,25 @@
+class Calculator {
+    static calcSum() {
+        sign = '+';
+        clearInput();
+    }
+
+    static calcDiff() {
+        sign = '-';
+        clearInput();
+    }
+
+    static calcMultipl() {
+        sign = '*';
+        clearInput();
+    }
+
+    static calcDivision() {
+        sign = '/';
+        clearInput();
+    }
+}
+
 let a = 0;
 let b = 0;
 let sign;
@@ -12,10 +34,10 @@ const buttonResult = document.querySelector('.equals');
 const buttonClear = document.querySelector('.clear');
 
 input.addEventListener("change", askFirstNumber);
-buttonSum.addEventListener("click", calcSum);
-buttonDiff.addEventListener("click", calcDiff);
-buttonMultiple.addEventListener("click", calcMultipl);
-buttonDivision.addEventListener("click", calcDivision);
+buttonSum.addEventListener("click", Calculator.calcSum);
+buttonDiff.addEventListener("click", Calculator.calcDiff);
+buttonMultiple.addEventListener("click", Calculator.calcMultipl);
+buttonDivision.addEventListener("click", Calculator.calcDivision);
 buttonResult.addEventListener("click", equals);
 buttonClear.addEventListener("click", clear);
 
@@ -49,25 +71,25 @@ function clearInput() {
     input.addEventListener("change", askSecondNumber);
 }
 
-function calcSum() {
-    sign = '+';
-    clearInput();
-}
+// function calcSum() {
+//     sign = '+';
+//     clearInput();
+// }
 
-function calcDiff() {
-    sign = '-';
-    clearInput();
-}
+// function calcDiff() {
+//     sign = '-';
+//     clearInput();
+// }
 
-function calcMultipl() {
-    sign = '*';
-    clearInput();
-}
+// function calcMultipl() {
+//     sign = '*';
+//     clearInput();
+// }
 
-function calcDivision() {
-    sign = '/';
-    clearInput();
-}
+// function calcDivision() {
+//     sign = '/';
+//     clearInput();
+// }
 
 function equals() {
     switch (sign) {
