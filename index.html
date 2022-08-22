@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Задание 1.2</title>
+    <title>Задание 3</title>
 </head>
 <body>
     <h1>Калькулятор</h1>
-    <input class="first-number" type="text" placeholder="Введите первое число">
-    <input class="second-number" type="text" placeholder="Введите второе число">
+    <input class="number first-number" type="text" placeholder="Введите первое число">
     <div class="calculator">
-        <button onclick="calcSum()">+</button>
-        <button onclick="calcDiff()">-</button>
-        <button onclick="calcMultipl()">*</button>
-        <button onclick="calcDivision()">/</button>
+        <button class="sum">+</button>
+        <button class="diff">-</button>
+        <button class="multiple">*</button>
+        <button class="division">/</button>
+        <button class="equals">=</button>
+        <button class="clear">C</button>
     </div>
     <div class="result"></div>
+
     <script src="index.js"></script>
 </body>
 </html>
