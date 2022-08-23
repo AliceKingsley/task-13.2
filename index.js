@@ -1,6 +1,6 @@
 class Calculator {
-    static calcSum() {
-        sign = '+';
+    static calcSum(elem) {
+        sign = elem;
         clearInput();
     }
 
@@ -34,7 +34,7 @@ const buttonResult = document.querySelector('.equals');
 const buttonClear = document.querySelector('.clear');
 
 input.addEventListener("change", askFirstNumber);
-buttonSum.addEventListener("click", Calculator.calcSum);
+buttonSum.addEventListener("click", () => Calculator.calcSum(buttonSum.textContent));
 buttonDiff.addEventListener("click", Calculator.calcDiff);
 buttonMultiple.addEventListener("click", Calculator.calcMultipl);
 buttonDivision.addEventListener("click", Calculator.calcDivision);
@@ -70,26 +70,6 @@ function clearInput() {
     input.placeholder = 'Введите второе число';
     input.addEventListener("change", askSecondNumber);
 }
-
-// function calcSum() {
-//     sign = '+';
-//     clearInput();
-// }
-
-// function calcDiff() {
-//     sign = '-';
-//     clearInput();
-// }
-
-// function calcMultipl() {
-//     sign = '*';
-//     clearInput();
-// }
-
-// function calcDivision() {
-//     sign = '/';
-//     clearInput();
-// }
 
 function equals() {
     switch (sign) {
